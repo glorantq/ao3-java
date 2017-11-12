@@ -1,7 +1,7 @@
 package me.glorantq.ao3.test
 
 import me.glorantq.ao3.AO3User
-import me.glorantq.ao3.utils.Utils
+import me.glorantq.ao3.utils.AO3Utils
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.hamcrest.MatcherAssert.assertThat
@@ -29,7 +29,7 @@ class JsonTest {
     fun testJsonSerialising() {
         val user: AO3User = AO3User("agrestenoir")
         val jsonData: String = user.json()
-        val deserialisedUser: AO3User = Utils.gson.fromJson(jsonData, AO3User::class.java)
+        val deserialisedUser: AO3User = AO3Utils.gson.fromJson(jsonData, AO3User::class.java)
         val secondJsonData: String = deserialisedUser.json()
 
         assertThat("json data", secondJsonData, equalTo(jsonData))

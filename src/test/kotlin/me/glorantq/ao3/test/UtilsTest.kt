@@ -1,7 +1,7 @@
 package me.glorantq.ao3.test
 
 import me.glorantq.ao3.AO3Work
-import me.glorantq.ao3.utils.Utils
+import me.glorantq.ao3.utils.AO3Utils
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.hamcrest.MatcherAssert.assertThat
@@ -27,8 +27,8 @@ class UtilsTest {
     @Test
     @DisplayName("Testing AO3 URL Encoding")
     fun testAO3URLEncode() {
-        assertThat("rating", tagUrl(Utils.ao3Urlencode(AO3Work.Ratings.GENERAL.value)), equalTo("http://archiveofourown.org/tags/General%20Audiences/works"))
-        assertThat("warning", tagUrl(Utils.ao3Urlencode(AO3Work.Warnings.NONE_APPLY.value)), equalTo("http://archiveofourown.org/tags/No%20Archive%20Warnings%20Apply/works"))
+        assertThat("rating", tagUrl(AO3Utils.ao3Urlencode(AO3Work.Ratings.GENERAL.value)), equalTo("http://archiveofourown.org/tags/General%20Audiences/works"))
+        assertThat("warning", tagUrl(AO3Utils.ao3Urlencode(AO3Work.Warnings.NONE_APPLY.value)), equalTo("http://archiveofourown.org/tags/No%20Archive%20Warnings%20Apply/works"))
     }
 
     private fun tagUrl(value: String): String = "http://archiveofourown.org/tags/$value/works"

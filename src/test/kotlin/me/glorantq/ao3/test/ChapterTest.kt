@@ -1,13 +1,9 @@
 package me.glorantq.ao3.test
 
 import me.glorantq.ao3.AO3Chapter
-import me.glorantq.ao3.AO3User
 import me.glorantq.ao3.AO3Work
-import me.glorantq.ao3.utils.Utils
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
-import org.hamcrest.MatcherAssert.assertThat
-import org.hamcrest.Matchers.*
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.TestInstance
 

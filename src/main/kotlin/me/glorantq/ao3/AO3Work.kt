@@ -20,7 +20,7 @@ class AO3Work(@Expose val id: Int) : AO3Data() {
     val title: String
 
     @Expose
-    val author: String
+    val authors: List<String>
 
     @Expose
     val archiveWarning: Warnings
@@ -35,7 +35,7 @@ class AO3Work(@Expose val id: Int) : AO3Data() {
     val fandom: String
 
     @Expose
-    val relationship: String
+    val relationships: List<String>
 
     @Expose
     val characters: List<String>
@@ -67,12 +67,13 @@ class AO3Work(@Expose val id: Int) : AO3Data() {
         val document: Document = getDocument()
 
         title = document.selectFirst("h2.title.heading").html()
-        author = document.selectFirst("h3.byline.heading a").html()
+        authors = document.selectFirst("h3.byline.heading").getElementsByTag("a").map { it.html() }
+
         archiveWarning = Warnings.byValue(getArhiveTag("warning", document))
         rating = Ratings.byValue(getArhiveTag("rating", document))
         category = Categories.byValue(getArhiveTag("category", document))
         fandom = getWorkTag("fandom", document)
-        relationship = getWorkTag("relationship", document)
+        relationships = document.selectFirst("dd.relationship.tags").getElementsByTag("ul")[0].getElementsByTag("li").map { it.getElementsByTag("a")[0].html() }
         characters = getTagList("character", document)
         additionalTags = getTagList("freeform", document)
         language = document.selectFirst("dd.language").html()

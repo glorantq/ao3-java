@@ -1,7 +1,7 @@
 package me.glorantq.ao3
 
 import me.glorantq.ao3.utils.AO3Exception
-import me.glorantq.ao3.utils.Utils
+import me.glorantq.ao3.utils.AO3Utils
 import okhttp3.Response
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -30,7 +30,7 @@ abstract class AO3Data {
      * @return  A JSoup parsed document
      */
     private fun getDocument(url: String, depth: Int): Document {
-        val response: Response = Utils.syncRequest(url)
+        val response: Response = AO3Utils.syncRequest(url)
         if(response.code() != 200) {
             if(errorMappings.containsKey(response.code())) {
                 throw AO3Exception("Invalid status code from AO3 (${response.code()})")
@@ -64,7 +64,7 @@ abstract class AO3Data {
      *
      * @return A JSON representation of the obejct
      */
-    fun json(): String = Utils.gson.toJson(this)
+    fun json(): String = AO3Utils.gson.toJson(this)
 
     /**
      * Builds a URL that can be queried for information

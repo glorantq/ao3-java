@@ -29,7 +29,7 @@ class WorkTest {
         val work: AO3Work = AO3Work(10731414)
 
         assertThat("work title", work.title, equalTo("eiffel for you"))
-        assertThat("work author", work.author, equalTo("agrestenoir"))
+        assertThat("work author", work.authors, hasItem("agrestenoir"))
         assertThat("rating", work.rating, equalTo(AO3Work.Ratings.GENERAL))
         assertThat("warnings", work.archiveWarning, equalTo(AO3Work.Warnings.NONE_APPLY))
         assertThat("language", work.language, equalTo("English"))
