@@ -16,9 +16,27 @@ Again, this is **not** an official API. At the moment there is no official one. 
 ### Examples
 The API is extremely easy to use, most things are just a line of code. The examples use Kotlin, but it's the same in Java. Data is shown as JSON here just for simplicity, of course it can be accessed from Java code as well.
 
+All methods querying the Archive can be found in the AO3 class:
+```kotlin
+AO3.getWork(workID)
+AO3.getUser(username)
+AO3.getPseud(username, pseud)
+```
+Exceptions include the `getChapter` method in AO3Work and the `fromJson` method in AO3Data
+Any data returned by this API can be converted to JSON by callint its `json` method:
+```kotlin
+val work: AO3Work = AO3.getWork(workId)
+val user: AO3User = AO3.getUser(username)
+val chapter: AO3Chapter = work.getChapter(chapterID)
+
+work.json()
+user.json()
+chapter.json()
+```
+
 #### Getting a Work
 ```kotlin
-val work: AO3Work = AO3Work(workID) // workID is the numeric part of the URL: http://archiveofourown.org/works/xxxxxxxx/
+val work: AO3Work = AO3.getWork(workID) // workID is the numeric part of the URL: http://archiveofourown.org/works/xxxxxxxx/
 ```
 Serialised as JSON:
 ```json
@@ -73,7 +91,7 @@ Serialised as JSON:
 #### Getting a Chapter
 You can get chapters by passing in a chapter ID to a Work object. The first element of the `notes` array is the note at the beginning, the last on is the end note.
 ```kotlin
-val chapter: AO3Chapter = AO3Work(workID).getChapter(chapterID) // Chapter ID can be obtained from the chapters map in AO3Work
+val chapter: AO3Chapter = AO3.getWork(workID).getChapter(chapterID) // Chapter ID can be obtained from the chapters map in AO3Work
 ```
 Serialised as JSON:
 ```json
@@ -89,9 +107,10 @@ Serialised as JSON:
 ```
 
 #### Getting a User
-You can get a user based on their username.
+You can get a user based on their username. Optionally, you can specify a pseud to use
 ```kotlin
-val user: AO3User = AO3User(username)
+val user: AO3User = AO3.getUser(username)
+val pseud: AO3User = AO3.getPseud(username, pseud)
 ```
 Serialised as JSON:
 ```json
@@ -99,16 +118,17 @@ Serialised as JSON:
   "imageUrl": "https://s3.amazonaws.com/otw-ao3-icons/icons/3027026/standard.gif?1504399592",
   "fandoms": [],
   "recentWorks": [],
-  "username": "glorantq"
+  "username": "glorantq",
+  "pseud": "glorantq"
 }
 ```
 
 #### Converting from JSON
-Converting from JSON can be done with the GSON instance found in AO3Utils
+Converting from JSON can be done with the `fromJson` method in AO3Data
 ```kotlin
-val work: AO3Work = AO3Utils.gson.fromJson(data, AO3Work::class.java)
-val chapter: AO3Chapter = AO3Utils.gson.fromJson(data, AO3Chapter::class.java)
-val user: AO3User = AO3Utils.gson.fromJson(data, AO3User::class.java)
+val work: AO3Work = AO3Data.fromJson(data, AO3Work::class.java)
+val chapter: AO3Chapter = AO3Data.fromJson(data, AO3Chapter::class.java)
+val user: AO3User = AO3Data.fromJson(data, AO3User::class.java)
 ```
 
 ### Usage
