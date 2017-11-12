@@ -22,8 +22,9 @@ AO3.getWork(workID)
 AO3.getUser(username)
 AO3.getPseud(username, pseud)
 ```
-Exceptions include the `getChapter` method in AO3Work and the `fromJson` method in AO3Data
-Any data returned by this API can be converted to JSON by callint its `json` method:
+Exceptions include the `getChapter` method in AO3Work and the `fromJson` method in AO3Data.
+
+Any data returned by this API can be converted to JSON by calling its `json` method:
 ```kotlin
 val work: AO3Work = AO3.getWork(workId)
 val user: AO3User = AO3.getUser(username)
