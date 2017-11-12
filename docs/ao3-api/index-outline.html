@@ -23,6 +23,21 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/index.html"><span class="keyword">object </span><span class="identifier">AO3</span></a></a><br/>
+<ul>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Module Contents</title>
+<link rel="stylesheet" href="..\style.css">
+</HEAD>
+<BODY>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-pseud.html"><span class="keyword">fun </span><span class="identifier">getPseud</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getPseud(kotlin.String, kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.AO3$getPseud(kotlin.String, kotlin.String)/pseud">pseud</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-user/index.html"><span class="identifier">AO3User</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-user.html"><span class="keyword">fun </span><span class="identifier">getUser</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getUser(kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-user/index.html"><span class="identifier">AO3User</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-work.html"><span class="keyword">fun </span><span class="identifier">getWork</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getWork(kotlin.Int)/workID">workID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/index.html"><span class="identifier">AO3Work</span></a></a></a><br/>
+</BODY>
+</HTML>
+</ul>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-chapter/index.html"><span class="keyword">class </span><span class="identifier">AO3Chapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="me.glorantq.ao3/-a-o3-data/index.html"><span class="identifier">AO3Data</span></a></a></a><br/>
 <ul>
 <HTML>
@@ -53,26 +68,13 @@
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/-init-.html"><span class="identifier">AO3Data</span><span class="symbol">(</span><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/build-url.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/error-mappings.html"><span class="keyword">protected</span> <span class="keyword">val </span><span class="identifier">errorMappings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/from-json.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">fromJson</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3Data.Companion$fromJson(kotlin.String, java.lang.Class((kotlin.Any)))/json">json</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.AO3Data.Companion$fromJson(kotlin.String, java.lang.Class((kotlin.Any)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/get-document.html"><span class="keyword">protected</span> <span class="keyword">fun </span><span class="identifier">getDocument</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Document</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/json.html"><span class="keyword">fun </span><span class="identifier">json</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 </BODY>
 </HTML>
 </ul>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/index.html"><span class="keyword">class </span><span class="identifier">AO3Exception</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-runtime-exception/index.html"><span class="identifier">RuntimeException</span></a></a></a><br/>
-<ul>
-<HTML>
-<HEAD>
-<meta charset="UTF-8">
-<title>Module Contents</title>
-<link rel="stylesheet" href="..\style.css">
-</HEAD>
-<BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String, java.lang.Exception)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String, java.lang.Exception)/ex">ex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a><span class="symbol">?</span><span class="symbol">)</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(java.lang.Exception)/ex">ex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a><span class="symbol">)</span></a></a><br/>
-</BODY>
-</HTML>
-</ul>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception.html"><span class="keyword">class </span><span class="identifier">AO3Exception</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-runtime-exception/index.html"><span class="identifier">RuntimeException</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/index.html"><span class="keyword">class </span><span class="identifier">AO3User</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="me.glorantq.ao3/-a-o3-data/index.html"><span class="identifier">AO3Data</span></a></a></a><br/>
 <ul>
 <HTML>
@@ -82,10 +84,10 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/-init-.html"><span class="identifier">AO3User</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3User$<init>(kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/build-url.html"><span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/fandoms.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">fandoms</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/image-url.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">imageUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/pseud.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">pseud</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/recent-works.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">recentWorks</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/username.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">username</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 </BODY>
@@ -100,7 +102,6 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/-init-.html"><span class="identifier">AO3Work</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3Work$<init>(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/-categories/index.html"><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Categories</span></a></a><br/>
 <ul>
 <HTML>
@@ -162,7 +163,7 @@
 </ul>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/additional-tags.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">additionalTags</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/archive-warning.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">archiveWarning</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-warnings/index.html"><span class="identifier">Warnings</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/author.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">author</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/authors.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">authors</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/build-url.html"><span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/category.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">category</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-categories/index.html"><span class="identifier">Categories</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/chapters.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">chapters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
@@ -173,26 +174,11 @@
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/language.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">language</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/published.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">published</span><span class="symbol">: </span><span class="identifier">Date</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/rating.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">rating</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-ratings/index.html"><span class="identifier">Ratings</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/relationship.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">relationship</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/relationships.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">relationships</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/stats.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">stats</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/summary.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">summary</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/title.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/updated.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">updated</span><span class="symbol">: </span><span class="identifier">Date</span></a></a><br/>
-</BODY>
-</HTML>
-</ul>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/index.html"><span class="keyword">object </span><span class="identifier">Utils</span></a></a><br/>
-<ul>
-<HTML>
-<HEAD>
-<meta charset="UTF-8">
-<title>Module Contents</title>
-<link rel="stylesheet" href="..\style.css">
-</HEAD>
-<BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/ao3-urlencode.html"><span class="keyword">fun </span><span class="identifier">ao3Urlencode</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.Utils$ao3Urlencode(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/gson.html"><span class="keyword">val </span><span class="identifier">gson</span><span class="symbol">: </span><span class="identifier">Gson</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/sync-request.html"><span class="keyword">fun </span><span class="identifier">syncRequest</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.Utils$syncRequest(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></a></a><br/>
 </BODY>
 </HTML>
 </ul>
@@ -208,6 +194,21 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/index.html"><span class="keyword">object </span><span class="identifier">AO3</span></a></a><br/>
+<ul>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Module Contents</title>
+<link rel="stylesheet" href="..\style.css">
+</HEAD>
+<BODY>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-pseud.html"><span class="keyword">fun </span><span class="identifier">getPseud</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getPseud(kotlin.String, kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.AO3$getPseud(kotlin.String, kotlin.String)/pseud">pseud</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-user/index.html"><span class="identifier">AO3User</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-user.html"><span class="keyword">fun </span><span class="identifier">getUser</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getUser(kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-user/index.html"><span class="identifier">AO3User</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3/get-work.html"><span class="keyword">fun </span><span class="identifier">getWork</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3$getWork(kotlin.Int)/workID">workID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/index.html"><span class="identifier">AO3Work</span></a></a></a><br/>
+</BODY>
+</HTML>
+</ul>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-chapter/index.html"><span class="keyword">class </span><span class="identifier">AO3Chapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="me.glorantq.ao3/-a-o3-data/index.html"><span class="identifier">AO3Data</span></a></a></a><br/>
 <ul>
 <HTML>
@@ -238,6 +239,7 @@
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/-init-.html"><span class="identifier">AO3Data</span><span class="symbol">(</span><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/build-url.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/error-mappings.html"><span class="keyword">protected</span> <span class="keyword">val </span><span class="identifier">errorMappings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/from-json.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">fromJson</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3Data.Companion$fromJson(kotlin.String, java.lang.Class((kotlin.Any)))/json">json</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.AO3Data.Companion$fromJson(kotlin.String, java.lang.Class((kotlin.Any)))/clazz">clazz</span><span class="symbol">:</span>&nbsp;<span class="identifier">Class</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/get-document.html"><span class="keyword">protected</span> <span class="keyword">fun </span><span class="identifier">getDocument</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Document</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-data/json.html"><span class="keyword">fun </span><span class="identifier">json</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 </BODY>
@@ -252,10 +254,10 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/-init-.html"><span class="identifier">AO3User</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3User$<init>(kotlin.String)/username">username</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/build-url.html"><span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/fandoms.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">fandoms</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/image-url.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">imageUrl</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/pseud.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">pseud</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/recent-works.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">recentWorks</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-user/username.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">username</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 </BODY>
@@ -270,7 +272,6 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/-init-.html"><span class="identifier">AO3Work</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.AO3Work$<init>(kotlin.Int)/id">id</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/-categories/index.html"><span class="keyword">enum</span> <span class="keyword">class </span><span class="identifier">Categories</span></a></a><br/>
 <ul>
 <HTML>
@@ -332,7 +333,7 @@
 </ul>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/additional-tags.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">additionalTags</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/archive-warning.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">archiveWarning</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-warnings/index.html"><span class="identifier">Warnings</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/author.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">author</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/authors.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">authors</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/build-url.html"><span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/category.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">category</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-categories/index.html"><span class="identifier">Categories</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/chapters.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">chapters</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
@@ -343,7 +344,7 @@
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/language.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">language</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/published.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">published</span><span class="symbol">: </span><span class="identifier">Date</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/rating.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">rating</span><span class="symbol">: </span><a href="me.glorantq.ao3/-a-o3-work/-ratings/index.html"><span class="identifier">Ratings</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/relationship.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">relationship</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/relationships.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">relationships</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/stats.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">stats</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/summary.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">summary</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
 <a href="docs\ao3-api\index"><a href="me.glorantq.ao3/-a-o3-work/title.html"><span class="identifier">@Expose</span> <span class="keyword">val </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
@@ -363,36 +364,7 @@
 <link rel="stylesheet" href="..\style.css">
 </HEAD>
 <BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/index.html"><span class="keyword">class </span><span class="identifier">AO3Exception</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-runtime-exception/index.html"><span class="identifier">RuntimeException</span></a></a></a><br/>
-<ul>
-<HTML>
-<HEAD>
-<meta charset="UTF-8">
-<title>Module Contents</title>
-<link rel="stylesheet" href="..\style.css">
-</HEAD>
-<BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String, java.lang.Exception)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String, java.lang.Exception)/ex">ex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a><span class="symbol">?</span><span class="symbol">)</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception/-init-.html"><span class="identifier">AO3Exception</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.AO3Exception$<init>(java.lang.Exception)/ex">ex</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html"><span class="identifier">Exception</span></a><span class="symbol">)</span></a></a><br/>
-</BODY>
-</HTML>
-</ul>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/index.html"><span class="keyword">object </span><span class="identifier">Utils</span></a></a><br/>
-<ul>
-<HTML>
-<HEAD>
-<meta charset="UTF-8">
-<title>Module Contents</title>
-<link rel="stylesheet" href="..\style.css">
-</HEAD>
-<BODY>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/ao3-urlencode.html"><span class="keyword">fun </span><span class="identifier">ao3Urlencode</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.Utils$ao3Urlencode(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/gson.html"><span class="keyword">val </span><span class="identifier">gson</span><span class="symbol">: </span><span class="identifier">Gson</span></a></a><br/>
-<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-utils/sync-request.html"><span class="keyword">fun </span><span class="identifier">syncRequest</span><span class="symbol">(</span><span class="identifier" id="me.glorantq.ao3.utils.Utils$syncRequest(kotlin.String)/url">url</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Response</span></a></a><br/>
-</BODY>
-</HTML>
-</ul>
+<a href="docs\ao3-api\index"><a href="me.glorantq.ao3.utils/-a-o3-exception.html"><span class="keyword">class </span><span class="identifier">AO3Exception</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-runtime-exception/index.html"><span class="identifier">RuntimeException</span></a></a></a><br/>
 </BODY>
 </HTML>
 </ul>
