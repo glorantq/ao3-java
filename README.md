@@ -112,7 +112,7 @@ val user: AO3User = AO3Utils.gson.fromJson(data, AO3User::class.java)
 ```
 
 ### Usage
-You can grap the latest JARs from the releases page. The fat JAR includes dependencies as well, the regular one needs to have these dependencies imported as well:
+You can grab the latest JARs from the releases page. The fat JAR includes dependencies as well, the regular one needs to have these dependencies imported as well:
 * JSoup (1.11.1)
 * OkHttp 3 (3.9.0)
 * GSON (2.8.2)
