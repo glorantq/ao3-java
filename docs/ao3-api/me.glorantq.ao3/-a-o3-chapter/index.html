@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AO3Chapter - ao3-api</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ao3-api</a>&nbsp;/&nbsp;<a href="../index.html">me.glorantq.ao3</a>&nbsp;/&nbsp;<a href=".">AO3Chapter</a><br/>
+<br/>
+<h1>AO3Chapter</h1>
+<code><span class="keyword">class </span><span class="identifier">AO3Chapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-a-o3-data/index.html"><span class="identifier">AO3Data</span></a></code>
+<p>Object exposing information about a chapter. Contains the title, the content itself and author notes</p>
+<p><strong>Author</strong><br/>
+Gerber Lóránt Viktor</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="content.html">content</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">content</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="id.html">id</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notes.html">notes</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">notes</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="title.html">title</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">title</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="work-i-d.html">workID</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">workID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-a-o3-data/error-mappings.html">errorMappings</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">errorMappings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-url.html">buildUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Builds a URL that can be queried for information</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-a-o3-data/get-document.html">getDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDocument</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Document</span></code>
+<p>Method used in subclasses to get the document</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-a-o3-data/json.html">json</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">json</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Converts this object to JSON</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

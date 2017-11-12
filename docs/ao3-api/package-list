@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+me.glorantq.ao3
+me.glorantq.ao3.utils

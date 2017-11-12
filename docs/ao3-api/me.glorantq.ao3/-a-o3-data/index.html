@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AO3Data - ao3-api</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">ao3-api</a>&nbsp;/&nbsp;<a href="../index.html">me.glorantq.ao3</a>&nbsp;/&nbsp;<a href=".">AO3Data</a><br/>
+<br/>
+<h1>AO3Data</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AO3Data</span></code>
+<p>Superclass for all other data classes. Contains utility methods to get a JSoup document, convert to JSON and a URL</p>
+<p><strong>Author</strong><br/>
+Gerber Lóránt Viktor</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AO3Data</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Superclass for all other data classes. Contains utility methods to get a JSoup document, convert to JSON and a URL</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="error-mappings.html">errorMappings</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">errorMappings</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html"><span class="identifier">MutableMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="build-url.html">buildUrl</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">buildUrl</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Builds a URL that can be queried for information</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-document.html">getDocument</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDocument</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Document</span></code>
+<p>Method used in subclasses to get the document</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="json.html">json</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">json</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Converts this object to JSON</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-a-o3-chapter/index.html">AO3Chapter</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AO3Chapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AO3Data</span></code>
+<p>Object exposing information about a chapter. Contains the title, the content itself and author notes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-a-o3-user/index.html">AO3User</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AO3User</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AO3Data</span></code>
+<p>Object representing an AO3 user. Exposes information such as the profile picture, works and fandoms</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-a-o3-work/index.html">AO3Work</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">AO3Work</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AO3Data</span></code>
+<p>Object representing a work on AO3. Contains statistics, metadata and chapter information</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
