@@ -66,6 +66,13 @@ abstract class AO3Data {
      */
     fun json(): String = AO3Utils.gson.toJson(this)
 
+    companion object {
+        /**
+         * Converts json back into the object
+         */
+        fun <T> fromJson(json: String, clazz: Class<*>): T = AO3Utils.gson.fromJson(json, clazz) as T
+    }
+
     /**
      * Builds a URL that can be queried for information
      */

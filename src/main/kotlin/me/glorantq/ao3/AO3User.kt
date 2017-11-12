@@ -9,7 +9,7 @@ import org.jsoup.nodes.Document
  * @author Gerber Lóránt Viktor
  * @since 1.0
  */
-class AO3User(@Expose val username: String) : AO3Data() {
+class AO3User internal constructor(@Expose val username: String, @Expose val pseud: String) : AO3Data() {
     @Expose
     val imageUrl: String
 
@@ -35,5 +35,5 @@ class AO3User(@Expose val username: String) : AO3Data() {
         }
     }
 
-    override fun buildUrl(): String = String.format("http://archiveofourown.org/users/%s", username)
+    override fun buildUrl(): String = String.format("http://archiveofourown.org/users/%s/pseuds/%s", username, pseud)
 }

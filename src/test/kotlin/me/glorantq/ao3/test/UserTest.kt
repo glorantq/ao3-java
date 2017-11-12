@@ -26,12 +26,12 @@ class UserTest {
     @Test
     @DisplayName("Testing user data")
     fun testUserData() {
-        val user: AO3User = AO3User("agrestenoir")
+        val user: AO3User = AO3User("agrestenoir", "agrestenoir")
 
         assertThat("username", user.username, equalTo("agrestenoir"))
         assertThat("fandoms", user.fandoms, hasSize(2))
 
-        val secondUser: AO3User = AO3User("glorantq")
+        val secondUser: AO3User = AO3User("glorantq", "glorantq")
 
         assertThat("works are empty", secondUser.recentWorks, hasSize(0))
         assertThat("fandoms are empty", secondUser.fandoms, hasSize(0))

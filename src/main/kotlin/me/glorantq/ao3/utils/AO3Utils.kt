@@ -12,7 +12,7 @@ import java.util.*
  * @author Gerber Lóránt Viktor
  * @since 1.0
  */
-object AO3Utils {
+internal object AO3Utils {
     private val httpClient: OkHttpClient = OkHttpClient.Builder().followRedirects(true).followSslRedirects(true).cookieJar(object : CookieJar {
         private val cookieStore = HashMap<String, List<Cookie>>()
 

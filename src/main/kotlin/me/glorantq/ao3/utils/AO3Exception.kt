@@ -7,7 +7,7 @@ package me.glorantq.ao3.utils
  * @since 1.0
  */
 class AO3Exception : RuntimeException {
-    constructor(message: String, ex: Exception?): super(message, ex)
-    constructor(message: String): super(message)
-    constructor(ex: Exception): super(ex)
+    internal constructor(message: String, ex: Exception?): super(message, ex)
+    internal constructor(message: String): super(message)
+    internal constructor(ex: Exception): super(ex)
 }

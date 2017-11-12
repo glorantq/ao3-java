@@ -15,7 +15,7 @@ import kotlin.collections.HashMap
  * @since 1.0
  */
 
-class AO3Work(@Expose val id: Int) : AO3Data() {
+class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
     @Expose
     val title: String
 
