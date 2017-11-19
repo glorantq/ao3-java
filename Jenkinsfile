@@ -3,12 +3,16 @@ pipeline {
   
   stages {
     stage('Build') {
-      sh './gradlew build'
-      archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+      steps {
+        sh './gradlew build'
+        archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+      }
     }
     
     stage('Test') {
-      sh './gradlew test'
+      steps {
+        sh './gradlew test'
+      }
     }
   }
 }
