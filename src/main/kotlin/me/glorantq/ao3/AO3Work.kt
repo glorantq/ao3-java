@@ -71,25 +71,37 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
 
         archiveWarning = Warnings.byValue(getArhiveTag("warning", document))
         rating = Ratings.byValue(getArhiveTag("rating", document))
-        category = Categories.byValue(getArhiveTag("category", document))
+        category = try { Categories.byValue(getArhiveTag("category", document)) } catch (e: Exception) { Categories.NONE }
         fandom = getWorkTag("fandom", document)
-        relationships = document.selectFirst("dd.relationship.tags").getElementsByTag("ul")[0].getElementsByTag("li").map { it.getElementsByTag("a")[0].html() }
-        characters = getTagList("character", document)
-        additionalTags = getTagList("freeform", document)
+        relationships = try { document.selectFirst("dd.relationship.tags").getElementsByTag("ul")[0].getElementsByTag("li").map { it.getElementsByTag("a")[0].html() } } catch (e: Exception) { emptyList() }
+        characters = try { getTagList("character", document) } catch (e: Exception) { emptyList() }
+        additionalTags = try { getTagList("freeform", document) } catch (e: Exception) { emptyList() }
         language = document.selectFirst("dd.language").html()
 
         val tempStats: HashMap<String, String> = HashMap()
         document.selectFirst("dl.stats").getElementsByTag("dd")
                 .filterNot {it.className() == "bookmarks" || it.className() == "status" || it.className() == "published"}
                 .forEach { tempStats.put(it.className(), it.html()) }
-        tempStats.put("bookmarks", document.selectFirst("dd.bookmarks").getElementsByTag("a")[0].html())
+        try {
+            tempStats.put("bookmarks", document.selectFirst("dd.bookmarks").getElementsByTag("a")[0].html())
+        } catch (e: Exception) {
+            tempStats.put("bookmarks", "0")
+        }
         stats = tempStats
 
         published = getDate("published", document)
-        updated = getDate("status", document)
+        updated = try {
+            getDate("updated", document)
+        } catch (e: Exception) {
+             published
+        }
 
         val tempChapters: HashMap<Int, String> = HashMap()
-        document.getElementById("selected_id").getElementsByTag("option").forEach { tempChapters.put(it.attr("value").toIntOrNull() ?: -1, it.html()) }
+        try {
+            document.getElementById("selected_id").getElementsByTag("option").forEach { tempChapters.put(it.attr("value").toIntOrNull() ?: -1, it.html()) }
+        } catch (e: Exception) {
+            tempChapters.put(id, title)
+        }
         chapters = tempChapters.toSortedMap()
 
         summary = try {
@@ -177,7 +189,8 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
         GEN("Gen"),
         M_M("M/M"),
         MULTI("Multi"),
-        OTHER("Other");
+        OTHER("Other"),
+        NONE("None");
 
         companion object {
             fun byValue(value: String): Categories = Categories.values().first { it.value.equals(value, true) }

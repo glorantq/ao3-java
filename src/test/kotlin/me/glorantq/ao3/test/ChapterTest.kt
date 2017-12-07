@@ -1,5 +1,6 @@
 package me.glorantq.ao3.test
 
+import me.glorantq.ao3.AO3
 import me.glorantq.ao3.AO3Chapter
 import me.glorantq.ao3.AO3Work
 import org.junit.jupiter.api.DisplayName
@@ -25,13 +26,13 @@ class ChapterTest {
     @Test
     @DisplayName("Testing chapter data")
     fun testChapters() {
-        val work: AO3Work = AO3Work(8480863)
+        val work: AO3Work = AO3.getWork(8480863)
         val chapter: AO3Chapter = work.getChapter(19433773)
 
-        val secondWork: AO3Work = AO3Work(10731414)
+        val secondWork: AO3Work = AO3.getWork(10731414)
         val secondChapter: AO3Chapter = secondWork.getChapter(23782818)
 
-        val thirdWork: AO3Work = AO3Work(11155020)
+        val thirdWork: AO3Work = AO3.getWork(11155020)
         val thirdChapter: AO3Chapter = thirdWork.getChapter(24892074)
 
         val adultChapter: AO3Chapter = AO3Chapter(11674323, 26273259)

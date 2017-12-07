@@ -1,5 +1,6 @@
 package me.glorantq.ao3.test
 
+import me.glorantq.ao3.AO3
 import me.glorantq.ao3.AO3Data
 import me.glorantq.ao3.AO3User
 import org.hamcrest.MatcherAssert.assertThat
@@ -27,7 +28,7 @@ class JsonTest {
     @Test
     @DisplayName("Testing Gson implementation")
     fun testJsonSerialising() {
-        val user: AO3User = AO3User("agrestenoir", "agrestenoir")
+        val user: AO3User = AO3.getUser("agrestenoir")
         val jsonData: String = user.json()
         val deserialisedUser: AO3User = AO3Data.fromJson(jsonData, AO3User::class.java)
         val secondJsonData: String = deserialisedUser.json()
