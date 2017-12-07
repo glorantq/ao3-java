@@ -9,6 +9,7 @@ I made this library becasue I want to make projects that use AO3 data. It is far
 ### Features
 - Work, user and chapter data
 - All objects can be converted to JSON and back
+- Allows searching for works
 
 ### Watch out
 Again, this is **not** an official API. At the moment there is no official one. This works by parsing the HTML of the pages and getting information from that. Any major layout changes made to the Archive will most definitely break this. I'll try to keep this as updated as possible, but keep in mind there is **no** guarantee that this will work.
@@ -21,6 +22,7 @@ All methods querying the Archive can be found in the AO3 class:
 AO3.getWork(workID)
 AO3.getUser(username)
 AO3.getPseud(username, pseud)
+AO3.searchWork(query, warnings, rating) // Has other overloads!
 ```
 Exceptions include the `getChapter` method in AO3Work and the `fromJson` method in AO3Data.
 
@@ -87,7 +89,13 @@ Serialised as JSON:
   "summary": "aaaaaaaaAAAAAAAAAAAA",
   "id": 10731414
 }
-
+```
+#### Searching for Works
+You can search for works with a simple query, or optionally you can specify a rating and warnings
+```kotlin
+val works: List<AO3Work> = AO3.searchWorks("Simple Query")
+val works: List<AO3Work> = AO3.searchWorks("Mature Works", AO3Work.Ratings.MATURE)
+val reallyComplex: List<AO3Work> = AO3.searchWorks("Specific", AO3Work.Warnings.NONE_APPLY, AO3Work.Ratings.MATURE)
 ```
 #### Getting a Chapter
 You can get chapters by passing in a chapter ID to a Work object. The first element of the `notes` array is the note at the beginning, the last on is the end note.
