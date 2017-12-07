@@ -1,4 +1,4 @@
-# ao3-java
+# ao3-java [![GitHub release](https://img.shields.io/github/release/glorantq/ao3-java.svg?style=flat-square)](https://github.com/glorantq/ao3-java/releases) [![Github All Releases](https://img.shields.io/github/downloads/glorantq/ao3-java/total.svg?style=flat-square)](https://github.com/glorantq/ao3-java)
 This library provides access to AO3 data like works, chapters and users.
 
 This is **not** an official API.
