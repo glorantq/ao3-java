@@ -30,8 +30,7 @@ class AO3Chapter internal constructor(@Expose val workID: Int, @Expose val id: I
         content = Joiner.on("\n").join(document.getElementsByAttributeValue("role", "article")[0].getElementsByTag("p").map { it.text() })
 
         notes = try {
-            document.getElementsByClass("notes")
-                    .filter { (it.hasAttr("role") && it.attr("role") == "complementary") || it.id() == "notes" }
+            document.select("div.notes.module")
                     .map { Joiner.on("\n").join(it.getElementsByClass("userstuff")[0].getElementsByTag("p").map { it.text() }) }
         } catch (e: Exception) {
             listOf()
