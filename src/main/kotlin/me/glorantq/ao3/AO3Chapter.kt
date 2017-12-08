@@ -20,6 +20,9 @@ class AO3Chapter internal constructor(@Expose val workID: Int, @Expose val id: I
     @Expose
     val notes: List<String>
 
+    @Expose
+    val summary: String
+
     init {
         val document: Document = getDocument()
 
@@ -32,6 +35,12 @@ class AO3Chapter internal constructor(@Expose val workID: Int, @Expose val id: I
                     .map { Joiner.on("\n").join(it.getElementsByClass("userstuff")[0].getElementsByTag("p").map { it.text() }) }
         } catch (e: Exception) {
             listOf()
+        }
+
+        summary = try {
+            Joiner.on("\n").join(document.selectFirst("div.summary.module").selectFirst("blockquote.userstuff").getElementsByTag("p").map { it.html() })
+        } catch (e: Exception) {
+            ""
         }
     }
 

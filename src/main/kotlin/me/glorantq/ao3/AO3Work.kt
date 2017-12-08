@@ -58,8 +58,6 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
     @Expose
     val chapters: Map<Int, String>
 
-    @Expose
-    val summary: String
 
     init {
         errorMappings.put(404, "Cannot find work with specified ID")
@@ -103,12 +101,6 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
             tempChapters.put(id, title)
         }
         chapters = tempChapters.toSortedMap()
-
-        summary = try {
-            Joiner.on("\n").join(document.selectFirst("div.summary.module").selectFirst("blockquote.userstuff").getElementsByTag("p").map { it.html() })
-        } catch (e: Exception) {
-            ""
-        }
     }
 
     override fun buildUrl(): String = String.format("https://archiveofourown.org/works/%d", id)
