@@ -32,10 +32,10 @@ abstract class AO3Data {
     private fun getDocument(url: String, depth: Int): Document {
         val response: Response = AO3Utils.syncRequest(url)
         if(response.code() != 200) {
-            if(errorMappings.containsKey(response.code())) {
-                throw AO3Exception("Invalid status code from AO3 (${response.code()})")
+            if(!errorMappings.containsKey(response.code())) {
+                throw AO3Exception("Invalid status code from AO3 (${response.code()}, $url)")
             } else {
-                throw AO3Exception("Invalid status code from AO3: ${errorMappings[response.code()]}")
+                throw AO3Exception("Invalid status code from AO3: ${errorMappings[response.code()]} ($url)")
             }
         } else {
             if(response.body() == null) {
