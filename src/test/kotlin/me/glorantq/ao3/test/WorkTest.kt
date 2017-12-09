@@ -57,4 +57,10 @@ class WorkTest {
         val complexSearch: List<AO3Work> = AO3.searchWork("Breeze AND 3laxx", AO3Work.Warnings.VIOLENCE, AO3Work.Ratings.MATURE)
         assertThat("complex search size", complexSearch.size, equalTo(1))
     }
+
+    @Test
+    fun testEdenDaphne() {
+        val work: AO3Work = AO3.getWork(9523928)
+        println(work.authors.map { it.buildUrl() })
+    }
 }

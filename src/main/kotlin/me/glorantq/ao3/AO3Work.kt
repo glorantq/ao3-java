@@ -6,6 +6,7 @@ import me.glorantq.ao3.utils.AO3Exception
 import org.jsoup.nodes.Document
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Matcher
 import kotlin.collections.HashMap
 
 /**
@@ -67,9 +68,9 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
         val pseudRegex: Regex = Regex("\\((.*?)\\)")
         val tempAuthors: MutableList<AO3User> = mutableListOf()
         document.selectFirst("h3.byline.heading").getElementsByTag("a").map { it.html() }.forEach {
-            if(pseudRegex.matches(it)) {
-                val pseud: String = pseudRegex.matchEntire(it)!!.groups[0]!!.value.trim()
-                val username: String = it.split(" ")[0].trim()
+            if(it.contains('(') && it.contains(')')) {
+                val username: String = pseudRegex.find(it)!!.groupValues[1]
+                val pseud: String = it.split(" ")[0].trim()
                 tempAuthors.add(AO3.getPseud(username, pseud))
             } else {
                 tempAuthors.add(AO3.getUser(it))
