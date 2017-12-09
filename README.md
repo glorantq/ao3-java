@@ -46,8 +46,22 @@ Serialised as JSON:
 {
   "title": "ayy",
   "authors": [
-    "author1",
-    "someotherguy"
+    {
+      "imageUrl": "https://s3.amazonaws.com/otw-ao3-icons/icons/1953616/standard.png?1511579332",
+      "fandoms": [
+        "Miraculous Ladybug",
+        "Voltron: Legendary Defender"
+      ],
+      "recentWorks": [
+        12824172,
+        11304987,
+        12231312,
+        11738514,
+        11326692
+      ],
+      "username": "agrestenoir",
+      "pseud": "agrestenoir"
+    }
   ],
   "archiveWarning": "NONE_APPLY",
   "rating": "GENERAL",
