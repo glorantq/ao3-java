@@ -89,7 +89,7 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
 
         published = getDate("published", document)
         updated = try {
-            getDate("updated", document)
+            getDate("status", document)
         } catch (e: Exception) {
              published
         }

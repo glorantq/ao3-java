@@ -28,7 +28,7 @@ class WorkTest {
     @Test
     @DisplayName("Testing work data")
     fun testWorkData() {
-        val work: AO3Work = AO3Work(10731414)
+        val work: AO3Work = AO3Work(11907219)
 
         assertThat("work title", work.title, equalTo("eiffel for you"))
         assertThat("work author", work.authors, hasItem("agrestenoir"))
