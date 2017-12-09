@@ -20,7 +20,7 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
     val title: String
 
     @Expose
-    val authors: List<String>
+    val authors: List<AO3User>
 
     @Expose
     val archiveWarning: Warnings
@@ -58,14 +58,24 @@ class AO3Work internal constructor(@Expose val id: Int) : AO3Data() {
     @Expose
     val chapters: Map<Int, String>
 
-
     init {
         errorMappings.put(404, "Cannot find work with specified ID")
 
         val document: Document = getDocument()
 
         title = document.selectFirst("h2.title.heading").html()
-        authors = document.selectFirst("h3.byline.heading").getElementsByTag("a").map { it.html() }
+        val pseudRegex: Regex = Regex("\\((.*?)\\)")
+        val tempAuthors: MutableList<AO3User> = mutableListOf()
+        document.selectFirst("h3.byline.heading").getElementsByTag("a").map { it.html() }.forEach {
+            if(pseudRegex.matches(it)) {
+                val pseud: String = pseudRegex.matchEntire(it)!!.groups[0]!!.value.trim()
+                val username: String = it.split(" ")[0].trim()
+                tempAuthors.add(AO3.getPseud(username, pseud))
+            } else {
+                tempAuthors.add(AO3.getUser(it))
+            }
+        }
+        authors = tempAuthors
 
         archiveWarning = Warnings.byValue(getArhiveTag("warning", document))
         rating = Ratings.byValue(getArhiveTag("rating", document))
